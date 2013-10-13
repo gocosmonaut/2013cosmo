@@ -3,11 +3,15 @@
  * Implements hook_html_head_alter().
  * This will overwrite the default meta character type tag with HTML5 version.
  */
+ 
 function skeletontheme_html_head_alter(&$head_elements) {
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8'
+    
   );
 }
+
+
 
 /**
  * Override or insert variables into the page template for HTML output.
@@ -18,6 +22,8 @@ function skeletontheme_process_html(&$variables) {
     _color_html_alter($variables);
   }
 }
+
+
 
 /**
  * Override or insert variables into the page template.
@@ -52,41 +58,21 @@ function skeletontheme_process_page(&$variables) {
   }
 }
 
+
+
 function skeletontheme_page_alter($page) {
-
-		$mobileoptimized = array(
-			'#type' => 'html_tag',
-			'#tag' => 'meta',
-			'#attributes' => array(
-			'name' =>  'MobileOptimized',
-			'content' =>  'width'
-			)
-		);
-
-		$handheldfriendly = array(
-			'#type' => 'html_tag',
-			'#tag' => 'meta',
-			'#attributes' => array(
-			'name' =>  'HandheldFriendly',
-			'content' =>  'true'
-			)
-		);
-
-		$viewport = array(
-			'#type' => 'html_tag',
-			'#tag' => 'meta',
-			'#attributes' => array(
-			'name' =>  'viewport',
-			'content' =>  'width=device-width, initial-scale=1'
-			)
-		);
-
-		drupal_add_html_head($mobileoptimized, 'MobileOptimized');
-		drupal_add_html_head($handheldfriendly, 'HandheldFriendly');
-		drupal_add_html_head($viewport, 'viewport');
-		
+	// <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+	$viewport = array(
+		'#type' => 'html_tag',
+		'#tag' => 'meta',
+		'#attributes' => array(
+		'name' =>  'viewport',
+		'content' =>  'width=device-width, initial-scale=1, maximum-scale=1'
+		)
+	);
+	drupal_add_html_head($viewport, 'viewport');
 }
-
+/*
 function skeletontheme_breadcrumb($variables) {
   $breadcrumb = $variables['breadcrumb'];
   if (!empty($breadcrumb)) {
@@ -99,27 +85,24 @@ function skeletontheme_breadcrumb($variables) {
   }
 }
 
+
+*/
+
 /**
  * Add Javascript for responsive mobile menu
  */
-if (theme_get_setting('responsive_menu_state')) {
+drupal_add_js(drupal_get_path('theme', 'skeletontheme') .'/js/jquery.mobilemenu.js');
 
-	drupal_add_js(drupal_get_path('theme', 'skeletontheme') .'/js/jquery.mobilemenu.js');
+drupal_add_js('jQuery(document).ready(function($) { 
 
-	$responsive_menu_switchwidth=theme_get_setting('responsive_menu_switchwidth');
-	$responsive_menu_topoptiontext=theme_get_setting('responsive_menu_topoptiontext');
-	
-	drupal_add_js('jQuery(document).ready(function($) { 
-	
-	$("#navigation .content > ul").mobileMenu({
-		prependTo: "#navigation",
-		combine: false,
-		switchWidth: '.$responsive_menu_switchwidth.',
-		topOptionText: "'.$responsive_menu_topoptiontext.'"
-	});
-	
-	});',
-	array('type' => 'inline', 'scope' => 'header'));
+$("#navigation .content > ul").mobileMenu({
+	prependTo: "#navigation",
+	combine: false,
+	switchWidth: 768,
+	topOptionText: "Select page"
+});
 
-}
+});',
+array('type' => 'inline', 'scope' => 'header'));
 //EOF:Javascript
+

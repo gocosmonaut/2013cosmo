@@ -361,6 +361,12 @@ div#block-views-project-capsules-block-2 div.item-list li.views-row.views-row-1 
 	height:auto;
 	margin-bottom:9px;
 }
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block {
+		display:none;
+	}
+
+
 	}
 	
 		
@@ -368,7 +374,10 @@ div#block-views-project-capsules-block-2 div.item-list li.views-row.views-row-1 
 /* in-between mobile phone and 960 desktop   */
 
 	@media only screen and  (min-width: 481px) and (max-width: 752px) {
-	
+	html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block {
+		display:none;
+	}
+
 	
 		div#block-views-project-capsules-block-2 { /* hide narrow block */
 	display:none;
@@ -400,7 +409,7 @@ div#block-views-project-capsules-block-2 div.item-list li.views-row.views-row-1 
 	}
 	
 	div#content {
-	margin: 12% auto 1%;
+	margin: 11% auto 1%;
 }
 	
 	div#block-views-project-capsules-block-1 div.item-list li.views-row-even div.views-field.views-field-field-service-icon img {
@@ -448,7 +457,7 @@ div#block-views-project-capsules-block-2 div.item-list li.views-row.views-row-1 
 	@media only screen and (min-width: 753px) {	
 	
 	div#content {
-	margin: 9% auto 1%;
+	margin: 7% auto 1%;
 }
 
 	h3 {
@@ -514,6 +523,55 @@ a#logo {
 	box-shadow:2px 1px 3px #ccc inset;
 	
 	}
+	
+	div.view.view-icon-legend {
+	margin:0px auto;
+}
+
+div.view-view-icon-legend table {
+	
+}
+
+div#block-views-icon-legend-block {
+	padding:0px;
+	margin-bottom:10px;
+}
+
+div.view-view-icon-legend table tr {
+background:#FFF;
+	border:0px;
+}
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block div.content div.view div.view-content table.views-view-grid {
+	width:100%;
+	margin:0px auto;
+		border-radius:4px;
+}
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block div.content div.view div.view-content table.views-view-grid tbody tr {
+background:#F0f0f0;
+text-align:center;
+	font-size:.75em;
+		border:0px;
+	
+		padding:4px;
+}
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block div.content div.view div.view-content table.views-view-grid tbody tr td {
+	border:0px;
+	width:14.2587%;
+}
+	
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block div.content div.view div.view-content table.views-view-grid tbody tr img {
+width:30px !important; height:30px !important; margin-top:4px; opacity:.8;
+	
+}
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block div.content div.view div.view-content table.views-view-grid tbody tr td {
+	width:100px;
+	padding:4px 0px;
+}
 	}
 
 /* now standard layout */
@@ -525,7 +583,56 @@ a#logo {
 	}
 
 div#content {
-	margin: 5% auto 1%;
+	margin: 6% auto 1%;
+}
+
+div.view.view-icon-legend {
+	margin:0px auto;
+}
+
+div.view-view-icon-legend table {
+	
+}
+
+div#block-views-icon-legend-block {
+	padding:0px;
+	margin-bottom:10px;
+}
+
+div.view-view-icon-legend table tr {
+background:#FFF;
+	border:0px;
+}
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block div.content div.view div.view-content table.views-view-grid {
+	width:845px;
+	margin:0px auto;
+		border-radius:4px;
+}
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block div.content div.view div.view-content table.views-view-grid tbody tr {
+background:#F0f0f0;
+text-align:center;
+	font-size:.75em;
+		border:0px;
+	
+		padding:4px;
+}
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block div.content div.view div.view-content table.views-view-grid tbody tr td {
+	border:0px;
+	width:14.2587%;
+}
+	
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block div.content div.view div.view-content table.views-view-grid tbody tr img {
+width:30px !important; height:30px !important; margin-top:4px; opacity:.8;
+	
+}
+
+html.js body.html div#wrap div.container div#content.sixteen div#main div.region div#block-views-icon-legend-block.block div.content div.view div.view-content table.views-view-grid tbody tr td {
+	width:100px;
+	padding:4px 0px;
 }
 
 		/* NAV */
@@ -685,7 +792,7 @@ div#block-views-project-capsules-block-1 div.item-list li.views-row.views-row-1 
 	}
 	
 	div#content {
-	margin: 2% auto 1%;
+	margin: 4% auto 1%;
 }
 	
 	div#block-views-project-capsules-block-2 { /* hide narrow block */

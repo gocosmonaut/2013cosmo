@@ -3,8 +3,6 @@
  * Implements hook_html_head_alter().
  * This will overwrite the default meta character type tag with HTML5 version.
  */
- 
- 
 function skeletontheme_html_head_alter(&$head_elements) {
   $head_elements['system_meta_content_type']['#attributes'] = array(
     'charset' => 'utf-8'

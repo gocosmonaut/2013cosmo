@@ -37,7 +37,7 @@ div#header {
 	top:0;
 	left:0;
 	z-index:100;
-	position:fixed;
+	/*position:fixed;*/
 	border-bottom:1px solid #999;
 	background:white;
 	box-shadow: 1px 1px 7px #CCCCCC;
